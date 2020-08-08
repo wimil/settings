@@ -1,0 +1,40 @@
+{
+    "name": "wimil/settings",
+    "description": "This package allows you to save the configuration in a more persistent way. Use the database to save your settings, you can save values in json format. You can also override the Laravel configuration.",
+    "keywords": [
+        "laravel",
+        "persistent",
+        "settings",
+        "config",
+        "json"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Reynaldo",
+            "email": "rldev25@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": ">=6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wimil\\Settings\\": "src/"
+        },
+        "files": [
+            "src/Helper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wimil\\Settings\\Provider"
+            ],
+            "aliases": {
+                "Settings": "Wimil\\Settings\\Facade"
+            }
+        }
+    }
+}
