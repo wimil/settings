@@ -23,7 +23,7 @@ Wimil\Settings\Provider::class,
 Add alias if you want to use the facade.
 
 ```php
-'Setting' => Wimil\Settings\Facade::class,
+'Settings' => Wimil\Settings\Facade::class,
 ```
 
 ### 3. Publish
@@ -62,8 +62,8 @@ $settings = settings();
 ### Using your model
 
 ```php
-use Wimil\Settings\Model\Setting as BaseSettings;
-class Setting extends BaseSettings {
+use Wimil\Settings\Model\Setting as BaseSetting;
+class Setting extends BaseSetting {
 
 }
 ```
