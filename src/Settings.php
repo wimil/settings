@@ -90,11 +90,8 @@ class Settings
 
     public function flush()
     {
-        if ($this->cacheIsTaggable()) {
-            Cache::tags($this->cacheName)->flush();
-        } else {
-            Cache::forget($this->cacheName);
-        }
+        Cache::tags($this->cacheName)->flush();
+        Cache::forget($this->cacheName);
     }
     private function isJson($str)
     {
